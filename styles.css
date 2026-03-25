@@ -1,171 +1,192 @@
 /* Estilo inspirado na Netflix */
+
+/* RESET GLOBAL - Remove espaçamentos padrão do navegador */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+    margin: 0; /* Remove margem padrão de todos elementos */
+    padding: 0; /* Remove padding padrão de todos elementos */
 }
 
+/* VARIÁVEIS CSS - Define cores reutilizáveis em todo o projeto */
 :root {
-    --bg-color: #141414;
-    --text-color: #ffffff;
-    --muted-color: #b3b3b3;
-    --accent-color: #e50914;
+    --bg-color: #141414; /* Preto da Netflix para fundo */
+    --text-color: #ffffff; /* Branco para texto principal */
+    --muted-color: #b3b3b3; /* Cinza claro para texto secundário */
+    --accent-color: #e50914; /* Vermelho Netflix (não usado atualmente, mas disponível) */
 }
 
+/* CONFIGURAÇÃO ESTRUTURA - Define altura mínima do documento */
 html, body {
-    height: 100%;
+    height: 100%; /* Body ocupa toda altura da viewport */
 }
 
+/* BODY - Estilo principal do corpo da página */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0;
+    background-color: var(--bg-color); /* Fundo preto sólido */
+    color: var(--text-color); /* Texto branco por padrão */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Fonte limpa estilo Netflix */
+    display: flex; /* Usa Flexbox para alinhamento */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* No mínimo, ocupa toda altura visível */
+    padding: 0; /* Sem padding */
 }
 
+/* MAIN - Container principal com conteúdo */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 960px;
-    padding: 1.5rem;
+    display: flex; /* Usa Flexbox para distribuir elementos */
+    flex-direction: column; /* Elementos empilhados verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    gap: 2.5rem; /* Espaço entre título e perfis */
+    width: 100%; /* Ocupa largura total disponível */
+    max-width: 960px; /* Limita a largura máxima para manter legibilidade */
+    padding: 1.5rem; /* Espaço interno */
 }
 
+/* HEADER H1 - Título principal */
 header h1 {
-    font-size: clamp(2.8rem, 6vw, 3.5rem);
-    font-weight: 500;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 1.5rem;
+    font-size: clamp(2.8rem, 6vw, 3.5rem); /* Tamanho responsivo: mín 2.8rem, máx 3.5rem */
+    font-weight: 500; /* Peso leviario para visual mais clean */
+    color: #ffffff; /* Texto branco */
+    text-align: center; /* Alinha centro */
+    margin-bottom: 1.5rem; /* Espaço abaixo do título */
 }
 
+/* PROFILES CONTAINER - Envoltório dos perfis */
 .profiles-container {
-    width: 100%;
+    width: 100%; /* Ocupa largura total */
 }
 
+/* PROFILES - Lista de perfis */
 .profiles {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Remove bullets padrão de listas */
+    display: flex; /* Usa Flexbox para distribuição horizontal */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    justify-content: center; /* Centraliza perfis horizontalmente */
+    gap: 2rem; /* Espaço entre perfis */
+    margin: 0; /* Sem margem */
+    padding: 0; /* Sem padding */
 }
 
+/* PROFILE ITEM - Cada item de perfil na lista */
 .profile-item {
-    flex: 0 1 140px;
-    display: flex;
-    justify-content: center;
+    flex: 0 1 140px; /* Flex-basis 140px, não cresce, encolhe se necessário */
+    display: flex; /* Ativa Flexbox */
+    justify-content: center; /* Centraliza filho (perfil) horizontalmente */
 }
 
+/* PROFILE - Contêiner individual de um perfil */
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    width: 160px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Empilha imagem e nome verticalmente */
+    align-items: center; /* Centraliza conteúdo horizontalmente */
+    text-align: center; /* Alinha texto ao centro */
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda padrão */
+    border-radius: 8px; /* Cantos ligeiramente arredondados */
+    width: 160px; /* Largura fixa */
+    cursor: pointer; /* Cursor vira mão (indica clickabilidade) */
+    transition: transform 0.3s ease; /* Suaviza transições (preparado para possíveis transforms) */
 }
 
+/* PROFILE HOVER/FOCUS - Interação ao passar mouse ou focar */
 .profile:hover,
 .profile:focus-within {
-    transform: none;
+    transform: none; /* Sem transformação (zoom removido) */
 }
 
+/* PROFILE IMAGE - Imagem do perfil */
 .profile-image {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    border: 2px solid transparent;
+    width: 160px; /* Largura fixa */
+    height: 160px; /* Altura fixa (quadrado) */
+    object-fit: cover; /* Recorta imagem para preencher espaço sem distorcer */
+    border-radius: 8px; /* Cantos arredondados como os cards */
+    display: block; /* Remove espaço inline padrão */
+    border: 2px solid transparent; /* Borda transparente (aparece ao hover) */
 }
 
+/* PROFILE IMAGE HOVER - Borda branca ao passar mouse */
 .profile:hover .profile-image,
 .profile:focus-within .profile-image {
-    border-color: #ffffff;
-    transition-duration: 0.15s;
+    border-color: #ffffff; /* Muda borda para branca */
+    transition-duration: 0.15s; /* Transição rápida (aparece em 150ms) */
 }
 
+/* PROFILE NAME - Nome do perfil */
 .profile-name {
-    margin-top: 0.8rem;
-    color: var(--muted-color);
-    font-size: 1.05rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    margin-top: 0.8rem; /* Espaço acima do nome */
+    color: var(--muted-color); /* Cor cinza claro */
+    font-size: 1.05rem; /* Tamanho um pouco maior que padrão */
+    font-weight: 500; /* Peso médio, legível mas não muito grosso */
+    transition: color 0.3s ease; /* Suaviza mudança de cor */
 }
 
+/* PROFILE NAME HOVER - Nome fica branco ao passar mouse */
 .profile:hover .profile-name,
 .profile:focus-within .profile-name {
-    color: #ffffff;
+    color: #ffffff; /* Muda nome para branco */
 }
 
+/* PROFILE NAME PADRÃO - Quando não tem hover */
 .profile-name:not(:hover) {
-    color: #b3b3b3;
+    color: #b3b3b3; /* Mantém cinza quando sem interação */
 }
 
+/* MANAGE BUTTON - Botão "Gerenciar perfis" */
 .manage-btn {
-    background: transparent;
-    border: 1px solid #808080;
-    color: #b3b3b3;
-    font-size: 1rem;
-    padding: 0.75rem 1.4rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background: transparent; /* Fundo transparente */
+    border: 1px solid #808080; /* Borda cinza escuro */
+    color: #b3b3b3; /* Texto cinza claro */
+    font-size: 1rem; /* Tamanho padrão */
+    padding: 0.75rem 1.4rem; /* Espaço interno (altura e largura) */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    cursor: pointer; /* Cursor em mão (indica clickabilidade) */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza mudanças */
 }
 
+/* MANAGE BUTTON HOVER/FOCUS - Inverte cores ao interagir */
 .manage-btn:hover,
 .manage-btn:focus {
-    background: #ffffff;
-    color: #000000;
-    border-color: #ffffff;
+    background: #ffffff; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    border-color: #ffffff; /* Borda branca */
 }
 
+/* RESPONSIVIDADE - Tablets (até 640px) */
 @media (max-width: 640px) {
     main {
-        padding: 1rem;
-        gap: 1.8rem;
+        padding: 1rem; /* Reduz espaço interno */
+        gap: 1.8rem; /* Reduz espaço entre título e perfis */
     }
 
     .profile-item {
-        flex: 0 1 42%;
+        flex: 0 1 42%; /* Perfis ocupam ~42% da largura (2 por linha) */
     }
 
     .profile {
-        width: 130px;
+        width: 130px; /* Reduz tamanho dos cards */
     }
 
     .profile-image {
-        width: 130px;
-        height: 130px;
+        width: 130px; /* Reduz imagem */
+        height: 130px; /* Mantém proporção quadrada */
     }
 }
 
+/* RESPONSIVIDADE - Celulares (até 420px) */
 @media (max-width: 420px) {
     .profile-item {
-        flex: 0 1 100%;
+        flex: 0 1 100%; /* Perfis ocupam 100% (um por linha) */
     }
 
     .profile {
-        width: 140px;
+        width: 140px; /* Tamanho adequado para móvel */
     }
 
     .profile-image {
-        width: 140px;
-        height: 140px;
+        width: 140px; /* Mesmo tamanho do container */
+        height: 140px; /* Mantém forma quadrada */
     }
 }
 
