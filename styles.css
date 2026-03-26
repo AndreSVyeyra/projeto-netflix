@@ -153,40 +153,72 @@ header h1 {
     border-color: #ffffff; /* Borda branca */
 }
 
-/* RESPONSIVIDADE - Tablets (até 640px) */
-@media (max-width: 640px) {
+/* RESPONSIVIDADE - Tablets (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
     main {
         padding: 1rem; /* Reduz espaço interno */
-        gap: 1.8rem; /* Reduz espaço entre título e perfis */
+        gap: 2rem; /* Ajusta espaço entre título e perfis */
     }
 
     .profile-item {
-        flex: 0 1 42%; /* Perfis ocupam ~42% da largura (2 por linha) */
+        flex: 0 1 45%; /* Perfis ocupam ~45% da largura (2 por linha) */
     }
 
     .profile {
-        width: 130px; /* Reduz tamanho dos cards */
+        width: 150px; /* Tamanho ajustado */
     }
 
     .profile-image {
-        width: 130px; /* Reduz imagem */
-        height: 130px; /* Mantém proporção quadrada */
+        width: 150px; /* Ajusta imagem */
+        height: 150px; /* Mantém proporção quadrada */
     }
 }
 
-/* RESPONSIVIDADE - Celulares (até 420px) */
-@media (max-width: 420px) {
+/* RESPONSIVIDADE - Celulares (até 767px) */
+@media (max-width: 767px) {
+    main {
+        padding: 1rem; /* Reduz espaço interno */
+        gap: 1.5rem; /* Reduz espaço entre título e perfis */
+    }
+
     .profile-item {
-        flex: 0 1 100%; /* Perfis ocupam 100% (um por linha) */
+        flex: 0 1 45%; /* Perfis ocupam ~45% da largura (2 por linha) */
     }
 
     .profile {
-        width: 140px; /* Tamanho adequado para móvel */
+        width: 100%; /* Ocupa largura total do item */
     }
 
     .profile-image {
-        width: 140px; /* Mesmo tamanho do container */
-        height: 140px; /* Mantém forma quadrada */
+        width: 100%; /* Ocupa largura total */
+        aspect-ratio: 1; /* Mantém proporção quadrada */
+        height: auto; /* Altura automática baseada na largura */
+    }
+
+    .manage-btn {
+        width: 100%; /* Botão ocupa largura total em mobile */
+        max-width: 200px; /* Limita largura máxima */
+    }
+}
+
+/* RESPONSIVIDADE - Grandes telas (1024px ou mais) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1200px; /* Aumenta largura máxima para telas grandes */
+        gap: 3rem; /* Aumenta espaço */
+    }
+
+    .profiles {
+        gap: 2.5rem; /* Aumenta espaço entre perfis */
+    }
+
+    .profile {
+        width: 170px; /* Aumenta tamanho dos cards */
+    }
+
+    .profile-image {
+        width: 170px; /* Aumenta imagem */
+        height: 170px; /* Mantém proporção */
     }
 }
 
