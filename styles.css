@@ -48,7 +48,7 @@ main {
 header h1 {
     font-size: clamp(2.8rem, 6vw, 3.5rem); /* Tamanho responsivo: mín 2.8rem, máx 3.5rem */
     font-weight: 500; /* Peso leviario para visual mais clean */
-    color: #ffffff; /* Texto branco */
+    color: var(--text-color); /* Texto conforme o tema */
     text-align: center; /* Alinha centro */
     margin-bottom: 1.5rem; /* Espaço abaixo do título */
 }
@@ -116,21 +116,22 @@ header h1 {
 /* PROFILE NAME - Nome do perfil */
 .profile-name {
     margin-top: 0.8rem; /* Espaço acima do nome */
-    color: var(--muted-color); /* Cor cinza claro */
+    color: var(--text-color); /* Texto conforme tema */
     font-size: 1.05rem; /* Tamanho um pouco maior que padrão */
-    font-weight: 500; /* Peso médio, legível mas não muito grosso */
-    transition: color 0.3s ease; /* Suaviza mudança de cor */
+    font-weight: 700; /* Peso forte para destaque */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza mudança de cor */
 }
 
-/* PROFILE NAME HOVER - Nome fica branco ao passar mouse */
+/* PROFILE NAME HOVER - Nome fica mais pronunciado */
 .profile:hover .profile-name,
 .profile:focus-within .profile-name {
-    color: #ffffff; /* Muda nome para branco */
+    color: var(--text-color); /* Mantém cor do tema */
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 }
 
-/* PROFILE NAME PADRÃO - Quando não tem hover */
+/* PROFILE NAME PADRÃO */
 .profile-name:not(:hover) {
-    color: #b3b3b3; /* Mantém cinza quando sem interação */
+    color: var(--text-color); /* Mantém cor consitente */
 }
 
 /* MANAGE BUTTON - Botão "Gerenciar perfis" */
@@ -145,12 +146,82 @@ header h1 {
     transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza mudanças */
 }
 
-/* MANAGE BUTTON HOVER/FOCUS - Inverte cores ao interagir */
+/* Ações - agrupa botões */
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Temas com classe .dark-mode */
+body {
+    --bg-color: #f5f5f5;
+    --text-color: #111111;
+    --muted-color: #444444;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-color: #141414;
+    --text-color: #ffffff;
+    --muted-color: #b3b3b3;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.theme-toggle-btn,
+.manage-btn {
+    min-width: 180px;
+    background: transparent;
+    border: 1px solid #808080;
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 0.75rem 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus,
 .manage-btn:hover,
 .manage-btn:focus {
-    background: #ffffff; /* Fundo branco */
-    color: #000000; /* Texto preto */
-    border-color: #ffffff; /* Borda branca */
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.theme-toggle-fixed {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: #ffffff;
+    color: #111111;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+    z-index: 999;
+}
+
+.theme-toggle-fixed:hover,
+.theme-toggle-fixed:focus {
+    transform: scale(1.08);
+}
+
+body.dark-mode .theme-toggle-fixed {
+    background-color: #222222;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* RESPONSIVIDADE - Tablets (768px a 1023px) */
