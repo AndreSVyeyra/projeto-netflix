@@ -1,58 +1,132 @@
+<!-- Declaração de tipo de documento HTML5 -->
 <!DOCTYPE html>
+
+<!-- Elemento raiz HTML com idioma em português brasileiro -->
 <html lang="pt-br">
 
+<!-- Seção de configuração do documento -->
 <head>
+    <!-- Define a codificação de caracteres como UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Define viewport para responsividade e escala inicial em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página para mecanismos de busca -->
     <meta name="description" content="Selecione seu perfil da Netflix para continuar assistindo.">
+    <!-- Define a cor do tema para navegadores e aplicativos -->
     <meta name="theme-color" content="#221f1f">
+    <!-- Título que aparece na aba do navegador -->
     <title>Seleção de Perfil - Netflix</title>
+    <!-- Link para o arquivo CSS de estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<!-- Corpo da página com conteúdo principal -->
 <body>
+    <!-- Elemento principal que contém todo o conteúdo da página -->
     <main>
+        <!-- Cabeçalho da página com o título de saudação -->
         <header>
+            <!-- Título principal da página -->
             <h1>Quem está assistindo?</h1>
         </header>
 
+        <!-- Seção contendo o container dos perfis -->
         <section class="profiles-container">
+            <!-- Lista não ordenada de perfis com role="list" para acessibilidade -->
             <ul class="profiles" role="list">
+                <!-- Primeiro item de perfil - Satoru Gojo -->
                 <li class="profile-item">
-                    <figure class="profile">
-                        <img src="assets/foto-perfil-1.jpg"
-                            alt="Ilustração em estilo anime de Satoru Gojo, com cabelos brancos e venda nos olhos, fazendo um gesto com os dedos sob uma iluminação dramática em tons de roxo e violeta"
-                            class="profile-image">
-                        <figcaption class="profile-name">Satoru Gojo</figcaption>
-                    </figure>
+                    <!-- Link que envolve todo o perfil para navegação com data attributes para localStorage -->
+                    <a href="catalogo/catalogo.html" class="profile-link" data-perfil-nome="Satoru Gojo" data-perfil-imagem="assets/foto-perfil-1.jpg">
+                        <!-- Figura com conteúdo do perfil -->
+                        <figure class="profile">
+                            <!-- Imagem do perfil com descrição alternativa -->
+                            <img src="assets/foto-perfil-1.jpg"
+                                alt="Ilustração em estilo anime de Satoru Gojo, com cabelos brancos e venda nos olhos, fazendo um gesto com os dedos sob uma iluminação dramática em tons de roxo e violeta"
+                                class="profile-image">
+                            <!-- Caption com o nome do perfil -->
+                            <figcaption class="profile-name">Satoru Gojo</figcaption>
+                        </figure>
+                    </a>
                 </li>
+                <!-- Segundo item de perfil - Sung Jin-woo -->
                 <li class="profile-item">
-                    <figure class="profile">
-                        <img src="assets/foto-perfil-2.jpg" alt="Ilustração de Sung Jin-woo, de Solo Leveling, com um olho brilhando em azul neon contra um fundo urbano noturno e desfocado" class="profile-image">
-                        <figcaption class="profile-name">Sung Jin-woo</figcaption>
-                    </figure>
+                    <!-- Link que envolve todo o perfil para navegação com data attributes para localStorage -->
+                    <a href="catalogo/catalogo.html" class="profile-link" data-perfil-nome="Sung Jin-woo" data-perfil-imagem="assets/foto-perfil-2.jpg">
+                        <!-- Figura com conteúdo do perfil -->
+                        <figure class="profile">
+                            <!-- Imagem do perfil com descrição alternativa -->
+                            <img src="assets/foto-perfil-2.jpg" alt="Ilustração de Sung Jin-woo, de Solo Leveling, com um olho brilhando em azul neon contra um fundo urbano noturno e desfocado" class="profile-image">
+                            <!-- Caption com o nome do perfil -->
+                            <figcaption class="profile-name">Sung Jin-woo</figcaption>
+                        </figure>
+                    </a>
                 </li>
+                <!-- Terceiro item de perfil - Ken Kaneki -->
                 <li class="profile-item">
-                    <figure class="profile">
-                        <img src="assets/foto-perfil-3.jpg" alt="Ilustração em estilo anime de Ken Kaneki, de Tokyo Ghoul, vestindo um capuz escuro e sua icônica máscara de dentes, com um olho normal e o outro vermelho em destaque" class="profile-image">
-                        <figcaption class="profile-name">Ken Kaneki</figcaption>
-                    </figure>
+                    <!-- Link que envolve todo o perfil para navegação com data attributes para localStorage -->
+                    <a href="catalogo/catalogo.html" class="profile-link" data-perfil-nome="Ken Kaneki" data-perfil-imagem="assets/foto-perfil-3.jpg">
+                        <!-- Figura com conteúdo do perfil -->
+                        <figure class="profile">
+                            <!-- Imagem do perfil com descrição alternativa -->
+                            <img src="assets/foto-perfil-3.jpg" alt="Ilustração em estilo anime de Ken Kaneki, de Tokyo Ghoul, vestindo um capuz escuro e sua icônica máscara de dentes, com um olho normal e o outro vermelho em destaque" class="profile-image">
+                            <!-- Caption com o nome do perfil -->
+                            <figcaption class="profile-name">Ken Kaneki</figcaption>
+                        </figure>
+                    </a>
                 </li>
-                 <li class="profile-item">
-                    <figure class="profile">
-                        <img src="assets/foto-perfil-4.jpg" alt="Perfil de Eren Yeager, do anime Attack on Titan, com uma expressão séria e determinada contra um fundo de céu nublado" class="profile-image">
-                        <figcaption class="profile-name">Eren Yeager</figcaption>
-                    </figure>
+                <!-- Quarto item de perfil - Eren Yeager -->
+                <li class="profile-item">
+                    <!-- Link que envolve todo o perfil para navegação com data attributes para localStorage -->
+                    <a href="catalogo/catalogo.html" class="profile-link" data-perfil-nome="Eren Yeager" data-perfil-imagem="assets/foto-perfil-4.jpg">
+                        <!-- Figura com conteúdo do perfil -->
+                        <figure class="profile">
+                            <!-- Imagem do perfil com descrição alternativa -->
+                            <img src="assets/foto-perfil-4.jpg" alt="Perfil de Eren Yeager, do anime Attack on Titan, com uma expressão séria e determinada contra um fundo de céu nublado" class="profile-image">
+                            <!-- Caption com o nome do perfil -->
+                            <figcaption class="profile-name">Eren Yeager</figcaption>
+                        </figure>
+                    </a>
                 </li>
             </ul>
         </section>
 
+        <!-- Div contendo as ações adicionais -->
         <div class="actions">
+            <!-- Botão para gerenciar os perfis -->
             <button type="button" class="manage-btn">Gerenciar perfis</button>
         </div>
     </main>
+    <!-- Botão flutuante para alternar entre modo claro e escuro -->
     <button class="theme-toggle-fixed" aria-label="Alternar modo claro/escuro" title="Alternar modo claro/escuro">🌞</button>
+    <!-- Link para arquivo JavaScript externo -->
     <script src="scripts.js"></script>
+    
+    <!-- Script inline para armazenar dados do perfil ativo no localStorage -->
+    <script>
+        // Seleciona todos os links de perfil na página
+        const perfilLinks = document.querySelectorAll('.profile-link');
+        
+        // Adiciona um event listener de clique em cada link de perfil
+        perfilLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Obtém o nome do perfil do atributo data-perfil-nome
+                const nomePerfil = this.getAttribute('data-perfil-nome');
+                
+                // Obtém a imagem do perfil do atributo data-perfil-imagem
+                const imagemPerfil = this.getAttribute('data-perfil-imagem');
+                
+                // Armazena o nome do perfil no localStorage
+                localStorage.setItem('perfilAtivoNome', nomePerfil);
+                
+                // Armazena a imagem do perfil no localStorage
+                localStorage.setItem('perfilAtivoImagem', imagemPerfil);
+                
+                // Log para verificar se os dados foram armazenados (opcional)
+                console.log('Perfil armazenado:', { nome: nomePerfil, imagem: imagemPerfil });
+            });
+        });
+    </script>
 </body>
 
 </html>

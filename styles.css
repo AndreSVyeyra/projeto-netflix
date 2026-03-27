@@ -44,6 +44,11 @@ main {
     padding: 1.5rem; /* Espaço interno */
 }
 
+a {
+    text-decoration: none; /* Remove sublinhado de links */
+    color: inherit; /* Herda cor do elemento pai */
+}
+
 /* HEADER H1 - Título principal */
 header h1 {
     font-size: clamp(2.8rem, 6vw, 3.5rem); /* Tamanho responsivo: mín 2.8rem, máx 3.5rem */
