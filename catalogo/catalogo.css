@@ -260,11 +260,11 @@ a:hover {
     background-color: transparent; /* Fundo totalmente transparente */
     border: none; /* Remove borda */
     color: white; /* Cor do texto */
-    font-size: 70px; /* Tamanho da seta */
+    font-size: 85px; /* Tamanho da seta */
     width: 40px; /* Largura */
     height: 100px; /* Altura */
     cursor: pointer; /* Cursor de ponteiro */
-    z-index: 10; /* Camada acima */
+    z-index: 100; /* Camada acima dos cards expandidos */
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s; /* Transição de opacidade */
 }
