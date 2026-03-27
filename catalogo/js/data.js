@@ -53,52 +53,52 @@ export const categories = [
 
             {
                 // URL da imagem de capa
-                img: "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/29/21/34/2921340a-8566-d6c8-321d-968c3e03abb5/SPE_CHAINSAW_MAN_THE_MOVIE_REZE_ARC_TH_BR_ARTWORK_PT-BR_3840x2160_54LYXJ00001G71.jpg/1200x675.jpg",
+                img: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GRMG8ZQZR-backdrop_wide",
                 // Progresso de assistência
                 progress: 0,
                 // URL do vídeo/trailer no YouTube
-                youtube: "https://www.youtube.com/watch?v=-FzTVkZNCRM"
+                youtube: "https://www.youtube.com/watch?v=ZcsbhQxhFqU"
             },
 
             // Sexto item
             {
                 // URL da imagem de capa
-                img: "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/29/21/34/2921340a-8566-d6c8-321d-968c3e03abb5/SPE_CHAINSAW_MAN_THE_MOVIE_REZE_ARC_TH_BR_ARTWORK_PT-BR_3840x2160_54LYXJ00001G71.jpg/1200x675.jpg",
+                img: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/86a1341f9d211bbf478cf2921823dc09.png",
                 // Progresso de assistência
                 progress: 0,
                 // URL do vídeo/trailer no YouTube
-                youtube: "https://www.youtube.com/watch?v=-FzTVkZNCRM"
+                youtube: "https://www.youtube.com/watch?v=MkzFKJjNnvM"
             },
 
             // Sétimo item
             {
                 // URL da imagem de capa
-                img: "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/29/21/34/2921340a-8566-d6c8-321d-968c3e03abb5/SPE_CHAINSAW_MAN_THE_MOVIE_REZE_ARC_TH_BR_ARTWORK_PT-BR_3840x2160_54LYXJ00001G71.jpg/1200x675.jpg",
+                img: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GR751KNZY-backdrop_wide",
                 // Progresso de assistência
                 progress: 0,
                 // URL do vídeo/trailer no YouTube
-                youtube: "https://www.youtube.com/watch?v=-FzTVkZNCRM"
+                youtube: "https://www.youtube.com/watch?v=LV-nazLVmgo"
             },
 
             // Oitavo item
 
             {
                 // URL da imagem de capa
-                img: "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/29/21/34/2921340a-8566-d6c8-321d-968c3e03abb5/SPE_CHAINSAW_MAN_THE_MOVIE_REZE_ARC_TH_BR_ARTWORK_PT-BR_3840x2160_54LYXJ00001G71.jpg/1200x675.jpg",
+                img: "https://gqcanimes.com.br/wp-content/uploads/2024/09/Tensei-Shitara-Slime-Datta-Ken-tensura-anime-1250x703.webp",
                 // Progresso de assistência
                 progress: 0,
                 // URL do vídeo/trailer no YouTube
-                youtube: "https://www.youtube.com/watch?v=-FzTVkZNCRM"
+                youtube: "https://www.youtube.com/watch?v=gqrkjNpoeQM"
             },
 
             // Nono item
             {
                 // URL da imagem de capa
-                img: "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/29/21/34/2921340a-8566-d6c8-321d-968c3e03abb5/SPE_CHAINSAW_MAN_THE_MOVIE_REZE_ARC_TH_BR_ARTWORK_PT-BR_3840x2160_54LYXJ00001G71.jpg/1200x675.jpg",
+                img: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3393070/2da767822d14b2961a51e05b3dc8461ac5490ebb/capsule_616x353.jpg?t=1764040502",
                 // Progresso de assistência
                 progress: 0,
                 // URL do vídeo/trailer no YouTube
-                youtube: "https://www.youtube.com/watch?v=-FzTVkZNCRM"
+                youtube: "https://www.youtube.com/watch?v=JwF7bhvnCxI"
             },
         ]
     },
