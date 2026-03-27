@@ -109,6 +109,7 @@ a:hover {
 
 /* Menu de perfil */
 .profile-menu {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -119,6 +120,66 @@ a:hover {
 .profile-icon {
     width: 32px; /* Largura do ícone */
     border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Dropdown do perfil */
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 4px;
+    min-width: 200px;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-item {
+    list-style: none;
+}
+
+.profile-item a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.profile-item a:hover,
+.profile-item a.active {
+    background-color: #333;
+}
+
+.dropdown-profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.divider {
+    height: 1px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.manage-profiles {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.manage-profiles:hover {
+    background-color: #333;
 }
 
 /* Container principal dos sliders/carousels */

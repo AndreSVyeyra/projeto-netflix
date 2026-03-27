@@ -1,59 +1,106 @@
+<!-- Declaração do tipo de documento HTML5 -->
 <!DOCTYPE html>
+<!-- Início do documento HTML com idioma português brasileiro -->
 <html lang="pt-BR">
 
+<!-- Cabeçalho da página -->
 <head>
+    <!-- Configuração de codificação de caracteres -->
     <meta charset="UTF-8">
+    <!-- Configuração da viewport para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
     <title>ínicio - Netflix</title>
+    <!-- Link para o arquivo CSS personalizado -->
     <link rel="stylesheet" href="catalogo.css">
+    <!-- Link para ícones Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Link para fontes Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
+<!-- Corpo da página -->
 <body>
-    <!-- Navbar -->
+    <!-- Barra de navegação -->
     <header class="navbar" id="navbar">
         <div class="navbar-left">
+            <!-- Logo da Netflix -->
             <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
                 alt="Netflix">
+            <!-- Menu de navegação -->
             <nav>
                 <ul class="nav-links">
-                    <li><a href="https://www.alura.com.br/" class="active">Início</a></li>
-                    <li><a href="https://www.alura.com.br/">Séries</a></li>
-                    <li><a href="https://www.alura.com.br/">Filmes</a></li>
-                    <li><a href="https://www.alura.com.br/">Jogos</a></li>
-                    <li><a href="https://www.alura.com.br/">Bombando</a></li>
-                    <li><a href="https://www.alura.com.br/">Minha lista</a></li>
-                    <li><a href="https://www.alura.com.br/">Melhores da Alura</a></li>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Bombando</a></li>
+                    <li><a href="#">Minha lista</a></li>
+                    <li><a href="#">Melhores da Animes</a></li>
                 </ul>
             </nav>
         </div>
         <div class="navbar-right">
+            <!-- Ícone de busca -->
             <i class="fas fa-search icon"></i>
+            <!-- Link para perfil infantil -->
             <a href="../index.html" class="kids-link">Seu nome</a>
+            <!-- Notificações -->
             <div class="nav-notification">
                 <i class="fas fa-bell icon"></i>
                 <span class="notification-badge">42</span>
             </div>
-            <a href="../index.html" class="profile-menu" style="text-decoration: none; color: inherit;">
-                <img class="profile-icon" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            <!-- Menu de perfil -->
+            <div class="profile-menu" id="profile-menu">
+                <img class="profile-icon" src="../assets/foto-perfil-1.jpg"
                     alt="Profile">
                 <i class="fas fa-caret-down icon" style="font-size: 14px; margin-left: 5px;"></i>
-            </a>
+                <!-- Dropdown menu -->
+                <ul class="profile-dropdown" id="profile-dropdown">
+                    <li class="profile-item">
+                        <a href="#" class="profile-option" data-nome="Satoru Gojo" data-imagem="../assets/foto-perfil-1.jpg">
+                            <img src="../assets/foto-perfil-1.jpg" alt="Satoru Gojo" class="dropdown-profile-img">
+                            <span>Satoru Gojo</span>
+                        </a>
+                    </li>
+                    <li class="profile-item">
+                        <a href="#" class="profile-option" data-nome="Sung Jin-woo" data-imagem="../assets/foto-perfil-2.jpg">
+                            <img src="../assets/foto-perfil-2.jpg" alt="Sung Jin-woo" class="dropdown-profile-img">
+                            <span>Sung Jin-woo</span>
+                        </a>
+                    </li>
+                    <li class="profile-item">
+                        <a href="#" class="profile-option" data-nome="Ken Kaneki" data-imagem="../assets/foto-perfil-3.jpg">
+                            <img src="../assets/foto-perfil-3.jpg" alt="Ken Kaneki" class="dropdown-profile-img">
+                            <span>Ken Kaneki</span>
+                        </a>
+                    </li>
+                    <li class="profile-item">
+                        <a href="#" class="profile-option" data-nome="Eren Yeager" data-imagem="../assets/foto-perfil-4.jpg">
+                            <img src="../assets/foto-perfil-4.jpg" alt="Eren Yeager" class="dropdown-profile-img">
+                            <span>Eren Yeager</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="../index.html" class="manage-profiles">Gerenciar perfis</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <!-- Sliders Container -->
+    <!-- Container principal para os sliders/carrosséis -->
     <main class="sliders-container" id="main-content">
-        <!-- Javascript will inject the rows here -->
+        <!-- O JavaScript irá injetar as linhas aqui -->
     </main>
 
-    <!-- Footer -->
+    <!-- Rodapé da página -->
     <footer>
         <div class="footer-content">
+            <!-- Link para o site da Alura -->
             <a href="https://www.alura.com.br/" target="_blank">
                 <p>Imersão Alura AI</p>
             </a>
+            <!-- Lista de links do rodapé -->
             <ul class="footer-links">
                 <li><a href="https://www.alura.com.br/" target="_blank">Perguntas frequentes</a></li>
                 <li><a href="https://www.alura.com.br/" target="_blank">Centro de ajuda</a></li>
@@ -74,6 +121,7 @@
         </div>
     </footer>
 
+    <!-- Script principal em módulo -->
     <script type="module" src="js/main.js"></script>
 </body>
 
