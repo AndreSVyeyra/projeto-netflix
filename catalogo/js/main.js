@@ -2,6 +2,35 @@ import { categories } from './data.js';
 import { createCarousel } from './components/Carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+        // Menu mobile responsivo
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        if (hamburgerBtn && mobileMenu && closeMobileMenu) {
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+            // Fecha menu ao clicar em um link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            });
+            // Fecha menu ao clicar fora
+            window.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== hamburgerBtn) {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
     const nomePerfil = localStorage.getItem('perfilAtivoNome');
     const imagemPerfil = localStorage.getItem('perfilAtivoImagem');
 
