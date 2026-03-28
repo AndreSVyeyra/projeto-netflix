@@ -1,3 +1,9 @@
+/* Ajuste para evitar sobreposição excessiva dos cards em hover na seção dos mais assistidos */
+.slider-section.mais-assistidos .movie-card:hover {
+    z-index: 10;
+    transform: scale(1.1) translateY(-2%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
 @media (max-width: 768px) {
     /* Esconde o botão de like, deixa play e adicionar/check */
     .left-buttons .btn-icon:nth-child(3) {
